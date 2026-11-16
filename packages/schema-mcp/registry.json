@@ -1,0 +1,34 @@
+{
+  "$schema": "https://raw.githubusercontent.com/modelcontextprotocol/registry/main/schema/server.schema.json",
+  "name": "schema-mcp",
+  "description": "Local-first MCP server for deterministic JSON Schema work: path-level diff between two schema versions with breaking vs non-breaking change classification, same-document $ref tracking, explicit not_supported reporting for dynamic keywords, and draft-07/2020-12 instance validation. Pure local computation: zero network, zero LLM, no hosted gateway.",
+  "version": "1.0.0",
+  "urls": {
+    "repository": "https://github.com/latbert/schema-diff-tools",
+    "homepage": "https://github.com/latbert/schema-diff-tools#readme"
+  },
+  "tools": [
+    {
+      "name": "schema_diff",
+      "description": "Diff two JSON Schema versions at path level with breaking-change classification (required additions, type narrowing, enum removals, minimum tightening, pattern changes...). Same-document $ref inlined; unsupported constructs reported explicitly."
+    },
+    {
+      "name": "schema_validate",
+      "description": "Validate a JSON instance document against a JSON Schema (draft-07 or 2020-12, auto-detected). Sorted issues with instancePath/schemaPath/keyword."
+    }
+  ],
+  "runtime": {
+    "type": "stdio",
+    "command": "npx",
+    "args": ["-y", "@nopilot/schema-mcp"]
+  },
+  "packages": [
+    {
+      "registry_type": "npm",
+      "identifier": "@nopilot/schema-mcp",
+      "version": "1.0.0"
+    }
+  ],
+  "license": "MIT",
+  "keywords": ["json-schema", "schema-diff", "breaking-changes", "validation", "local-first", "offline"]
+}

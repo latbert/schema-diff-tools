@@ -1,0 +1,27 @@
+{
+  "$schema": "https://raw.githubusercontent.com/modelcontextprotocol/registry/main/schema/server.schema.json",
+  "mcpServers": [
+    {
+      "name": "schema-mcp",
+      "description": "Local-first MCP server for deterministic JSON Schema work: path-level diff between two schema versions with breaking vs non-breaking change classification, same-document $ref tracking, explicit not_supported reporting for dynamic keywords, and draft-07/2020-12 instance validation. Pure local computation: zero network, zero LLM, no hosted gateway.",
+      "status": "active",
+      "repository": {
+        "source": "github",
+        "id": "latbert/schema-diff-tools"
+      },
+      "version": "1.0.0",
+      "packages": [
+        {
+          "registry_type": "npm",
+          "registry_base_url": "https://registry.npmjs.org",
+          "identifier": "@nopilot/schema-mcp",
+          "version": "1.0.0",
+          "transport": {
+            "type": "stdio"
+          }
+        }
+      ],
+      "remotes": []
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "name": "@nopilot/schema-mcp",
+  "version": "1.0.0",
+  "description": "Local-first MCP server for deterministic JSON Schema work: path-level diff between two schema versions, breaking vs non-breaking change classification (required additions, type narrowing, enum removals, minimum tightening, pattern changes...), same-document $ref tracking, draft-07 & 2020-12 subsets with explicit not_supported reporting, and instance validation. stdio + Streamable HTTP. Zero network, zero LLM.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "schema-mcp": "dist/main.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "server.json",
+    "registry.json"
+  ],
+  "scripts": {
+    "build": "tsc -b"
+  },
+  "dependencies": {
+    "@nopilot/schema-diff-engine": "^1.0.0",
+    "@nopilot/mcp-server-common": "^0.1.0",
+    "zod": "^4.6.7"
+  },
+  "engines": {
+    "node": ">=20.19"
+  },
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "json-schema",
+    "schema-diff",
+    "breaking-changes",
+    "backward-compatibility",
+    "model-context-protocol",
+    "local-first",
+    "offline"
+  ],
+  "author": "latbert",
+  "homepage": "https://github.com/latbert/schema-diff-tools#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/latbert/schema-diff-tools.git",
+    "directory": "packages/schema-mcp"
+  }
+}

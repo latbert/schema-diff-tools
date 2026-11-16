@@ -1,0 +1,46 @@
+{
+  "name": "@nopilot/schema-diff-engine",
+  "version": "1.0.0",
+  "description": "Deterministic JSON Schema engine: path-level diff between two schema versions, breaking vs non-breaking change classification (required additions, type narrowing, enum removals, minimum tightening, pattern changes, required-property deletion...), same-document $ref tracking, draft-07 & 2020-12 keyword subsets with explicit not_supported reporting, and instance validation. Pure local computation, zero network, zero LLM.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -b"
+  },
+  "dependencies": {
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=20.19"
+  },
+  "keywords": [
+    "json-schema",
+    "schema-diff",
+    "breaking-changes",
+    "backward-compatibility",
+    "validation",
+    "draft-07",
+    "draft-2020-12",
+    "local-first",
+    "offline"
+  ],
+  "author": "latbert",
+  "homepage": "https://github.com/latbert/schema-diff-tools#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/latbert/schema-diff-tools.git",
+    "directory": "packages/schema-diff-engine"
+  }
+}

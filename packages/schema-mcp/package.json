@@ -1,6 +1,7 @@
 {
   "name": "@nopilot/schema-mcp",
-  "version": "1.0.0",
+  "version": "1.0.1",
+    "mcpName": "io.github.latbert/schema-mcp",
   "description": "Local-first MCP server for deterministic JSON Schema work: path-level diff between two schema versions, breaking vs non-breaking change classification (required additions, type narrowing, enum removals, minimum tightening, pattern changes...), same-document $ref tracking, draft-07 & 2020-12 subsets with explicit not_supported reporting, and instance validation. stdio + Streamable HTTP. Zero network, zero LLM.",
   "license": "MIT",
   "type": "module",
